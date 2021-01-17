@@ -1,0 +1,25 @@
+.launch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.launch img {
+display: block;
+margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rockets {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.description {
+  margin-top: 5px;
+  margin-bottom: 5px;   
+}
