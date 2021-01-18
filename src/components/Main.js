@@ -15,7 +15,7 @@ const Main = () => {
         const request = axios.get(url);
         const response = await request;
 
-        console.log(response.data.results)
+        // console.log(response.data.results)
 
         setLaunch(response.data.results);
     }
