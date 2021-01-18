@@ -45,7 +45,7 @@ const Launch = ({launch}) => {
         <div className="launch">
             {launch.map((i, index) => 
             {
-                if(i.image != null) {
+                if (i.image != null && new Date(i.net) > new Date()) {
                     return ( 
                 <div className="rockets">
                  <h2>{i.name}</h2>
