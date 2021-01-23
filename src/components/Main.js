@@ -11,7 +11,7 @@ const Main = () => {
     const [launch, setLaunch] = useState();
 
     const api_call = async () => {
-        const url = `https://spacelaunchnow.me/api/3.5.0/launch/upcoming/?limit=20`;
+        const url = `https://spacelaunchnow.me/api/3.5.0/launch/upcoming/?mode=detailed&limit=20`;
         const request = axios.get(url);
         const response = await request;
 
@@ -20,7 +20,11 @@ const Main = () => {
         setLaunch(response.data.results);
     }
 
+
+    
+
     useEffect(api_call, []);
+    
 
     return (
         <div className="main">

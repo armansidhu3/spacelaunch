@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Countdown from "./Countdown";
+import axios from "axios";
 
 const Launch = ({launch}) => {
     var months = [ "January", "February", "March", "April", "May", "June", 
@@ -41,6 +42,46 @@ const Launch = ({launch}) => {
         return "";
     }
 
+    // const vid_url = async (url) => {
+    //     if (!url) {
+    //         console.log("")
+    //         return "";
+    //     }
+    //     let new_url = url.substring(4);
+    //     new_url = "https" + new_url;
+    //     const response = "";
+    //     const request = "";
+
+    //     try {
+    //     request = axios.get(new_url)
+   
+    //     response = await request;
+
+    // } catch(error) {
+    //     console.log("")
+    //     return "";
+    // }
+    //     console.log(response);
+
+    //     if (!response) {
+    //         console.log("")
+    //         return "";
+    //     }
+
+    //     if (response.data.vidURLs.length > 0) {
+    //         console.log("Live link:" + response.data.vidURLs[0].url)
+    //         return response.data.vidURLs[0].url;
+    //     }
+    //     console.log("");
+    //     return "";
+    // }
+
+    function liveURL(url) {
+        if (typeof url !== 'undefined'  && url.length > 0) {
+            return <a href={url[0].url} target="_blank"><button><p>Live webcast</p></button></a>
+        }
+    }
+
     return (
         <div className="launch">
             {launch.map((i, index) => 
@@ -57,6 +98,7 @@ const Launch = ({launch}) => {
                 </div>
                 <p>Time until: {localDate(i)}</p>
                 { <Countdown date={parseDate(i)} /> }
+                {liveURL(i.vidURLs)}
                 </div>
                     )
                 }
