@@ -1,18 +1,37 @@
 .wrapper {
-    background-color: black;
-    color: white;
-    background-image: url("../../images/earth.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 120% 210%; 
-    background-size: 550px;
-    // margin-right: auto;
-    // margin-left:  auto;
-    height: 100%;
-    // max-width: 960px;
-    padding-right: 10px;
-    padding-left:  10px;
-    // display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #121212;
+  color: #ffffff;
+  // background-image: url("../../images/earth.jpg");
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-position: 120% 150%;
+  // background-size: 450px;
+  // margin-right: auto;
+  // margin-left:  auto;
+  height: 100%;
+  // max-width: 960px;
+  padding-right: 10px;
+  padding-left: 10px;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+}
+
+
+.header h1 {
+    font-size: 35px;
+}
+// .header h1 {
+//     font-size: 50px;
+//     background: -webkit-linear-gradient(#FB5086, #9638FE);
+//    -webkit-background-clip: text;
+//    -webkit-text-fill-color: transparent;
+//    font-weight: 1000;
+// }

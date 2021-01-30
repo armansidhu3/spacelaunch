@@ -4,8 +4,45 @@
 @import "./modules/countdown";
 
 
-/* Mobile view */
 
+// /* If the width of the screen is 1600px or less, switch to desktop view */
+// @media screen and (max-width: 1600px) {
+
+//     .wrapper {
+//         background-size: 500px;
+//         background-position: 120% 130%;
+//     }
+
+//     // .launch {
+//     //     min-width: 270px;
+//     // }
+
+//     img {
+//         width: 500px;
+//     }
+
+// }
+
+// /* If the width of the screen is 1200px or less, switch to tablet view */
+// @media screen and (max-width: 1200px) {
+
+//     .wrapper {
+//         background-size: 300px;
+//         background-position: 110% 120%;
+//     }
+
+//     // .launch {
+//     //     min-width: 270px;
+//     // }
+
+//     img {
+//         width: 300px;
+//     }
+
+// }
+
+
+/* Mobile view */
 /* If the width of the screen is 840px or less, switch to mobile view */
 @media screen and (max-width: 840px) {
 
@@ -19,7 +56,6 @@
 
     img {
         width: 270px;
-        // height: 150px;
     }
 
     /* Setting the flex direction of header as column without wrapping */
@@ -27,15 +63,4 @@
         flex-flow: column nowrap;
         padding-bottom: 20px;
     }
-
-    /* Setting the flex direction of flex-container as column without any wrap */
-    #flex-container {
-        flex-flow: column nowrap;
-    }
-
-    /* Setting the width and background color of the button */
-    #check-current-temp {
-        width: 100%;
-        background-color: maroon;
-    }    
 }

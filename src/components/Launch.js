@@ -17,14 +17,28 @@ const Launch = ({launch}) => {
     function parseDate(i) {
 
     d = new Date(i.net)
+
     return months[d.getUTCMonth()] + " " + d.getUTCDate() + " " + d.getUTCFullYear() + " " + d.getUTCHours() + ":" + d.getUTCMinutes() + " UTC";
     }
 
     function localDate(i) {
         d = new Date(i.net)
-        return months[d.getMonth()] + " " + d.getDate() + " " + d.getFullYear() + " | " + formatAMPM(d);
+
+        let timezone = "GMT" + createOffset(d);
+    
+        return months[d.getMonth()] + " " + d.getDate() + " " + d.getFullYear() + " | " + formatAMPM(d) + " " + timezone;
     }
 
+    function pad(value) {
+        return value < 10 ? '0' + value : value;
+    }
+    function createOffset(date) {
+        var sign = (date.getTimezoneOffset() > 0) ? "-" : "+";
+        var offset = Math.abs(date.getTimezoneOffset());
+        var hours = pad(Math.floor(offset / 60));
+        var minutes = pad(offset % 60);
+        return sign + hours + ":" + minutes;
+    }
     
     function formatAMPM(date) {
         var hours = date.getHours();
@@ -90,7 +104,7 @@ const Launch = ({launch}) => {
                     return ( 
                 <div className="rockets">
                  <h2>{i.name}</h2>
-                <img width="500px" src={i.image}></img>
+                <img src={i.image} alt={i.name} width="500px"></img>
                 <p>{i.launch_service_provider.name}</p>
                 <p>{i.pad.name}</p>
                 <div className="description">
