@@ -1,4 +1,4 @@
-Live Link - https://spacelaunch.ninja/
+
 
 # Getting Started with Create React App
 
